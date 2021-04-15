@@ -39,7 +39,7 @@ def HM():
                     embed.add_embed_field(name='listen_addrs', value=str(res['data']['status']['listen_addrs']))
                     embed.add_embed_field(name='reward_scale', value=str(res['data']['reward_scale']))
                         
-                    embed.set_footer(text='Sudobotz.com')
+                    embed.set_footer(text='Hotspot Monitor')
                     embed.set_timestamp()
                     webhook.add_embed(embed)
                     webhook.execute()
@@ -84,7 +84,7 @@ def HM():
                         else:
                             embed.add_embed_field(name='reward_scale', value=records[urlKey[0]]['reward_scale'])
                             
-                        embed.set_footer(text='Sudobotz.com')
+                        embed.set_footer(text='Hotspot Monitor')
                         embed.set_timestamp()
                         webhook.add_embed(embed)
                         webhook.execute()
@@ -98,7 +98,7 @@ def HM():
                 embed.add_embed_field(name='Device Address', value=urlKey[0])
                 embed.add_embed_field(name='Device Nickname', value=urlKey[1])
                 embed.add_embed_field(name='Error Code', value=statusCode)
-                embed.set_footer(text='Sudobotz.com')
+                embed.set_footer(text='Hotspot Monitor')
                 embed.set_timestamp()
                 webhook.add_embed(embed)
                 webhook.execute()
