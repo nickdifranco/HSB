@@ -32,7 +32,7 @@ def HM():
                     records[urlKey[0]] = {'deName': urlKey[1], 'online': str(res['data']['status']['online']), 'listen_addrs': str(res['data']['status']['listen_addrs']), 'reward_scale': str(res['data']['reward_scale'])}
                     
                     webhook = DiscordWebhook(url=webhook_url)
-                    embed = DiscordEmbed(title='HeliumBOT : Added to records', color=242424)
+                    embed = DiscordEmbed(title='Hotspot Bot : Added to records', color=242424)
                     embed.add_embed_field(name='Device Address', value=urlKey[0])
                     embed.add_embed_field(name='Device Nickname', value=urlKey[1])
                     embed.add_embed_field(name='online', value=str(res['data']['status']['online']))
@@ -62,7 +62,7 @@ def HM():
                         
                     if newOnline == True or newAddrs == True or newReward == True:
                         webhook = DiscordWebhook(url=webhook_url)
-                        embed = DiscordEmbed(title='HeliumBOT : New Update', color=242424)
+                        embed = DiscordEmbed(title='Hotspot Bot : New Update', color=242424)
                         embed.add_embed_field(name='Device Address', value=urlKey[0])
                         embed.add_embed_field(name='Device Nickname', value=urlKey[1])
                         
@@ -94,7 +94,7 @@ def HM():
                         pass
             else:
                 webhook = DiscordWebhook(url=webhook_url)
-                embed = DiscordEmbed(title='HeliumBOT : Error', color=242424)
+                embed = DiscordEmbed(title='Hotspot Bot : Error', color=242424)
                 embed.add_embed_field(name='Device Address', value=urlKey[0])
                 embed.add_embed_field(name='Device Nickname', value=urlKey[1])
                 embed.add_embed_field(name='Error Code', value=statusCode)
